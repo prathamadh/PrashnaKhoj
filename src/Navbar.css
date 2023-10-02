@@ -12,6 +12,7 @@ nav {
   background: white;
   height: 80px;
   width: 100%;
+  box-shadow: 0 50px 50px 5px rgba(0, 0, 0, 1);
 }
 label.logo {
   color: #140c40;

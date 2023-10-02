@@ -2,10 +2,12 @@
   background-color: #e7edfa;
 } */
 
-body {
+.sec {
   background-color: #e7edfa;
+  height: auto;
 }
-p {
+.secP {
+  text-align: center;
   color: #140c40;
   font-size: 100px;
   font-family: Basis Grotesque, Helvetica, sans-serif;
