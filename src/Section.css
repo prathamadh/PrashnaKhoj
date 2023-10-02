@@ -1,0 +1,15 @@
+/* * {
+  background-color: #e7edfa;
+} */
+
+body {
+  background-color: #e7edfa;
+}
+p {
+  color: #140c40;
+  font-size: 100px;
+  font-family: Basis Grotesque, Helvetica, sans-serif;
+  -webkit-font-feature-settings: "salt";
+  font-feature-settings: "salt";
+  font-variant-numeric: tabular-nums;
+}
