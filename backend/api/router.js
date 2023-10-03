@@ -3,7 +3,7 @@ const sqlite3 = require("sqlite3").verbose();
 const fs = require("fs");
 const path = require("path");
 
-const db = new sqlite3.Database("test.db");
+const db = new sqlite3.Database("final.db");
 
 const router = require("express").Router();
 // const db = require("../config/connectdb");

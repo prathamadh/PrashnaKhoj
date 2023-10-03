@@ -1,21 +1,21 @@
-const db = require("../config/connectdb");
+// const db = require("../config/connectdb");
 
-module.exports = {
-  getData: (callBack) => {
-    const name = "photp copy.jpg";
+// module.exports = {
+//   getData: (callBack) => {
+//     const name = "photp copy.jpg";
 
-    db.get("SELECT data FROM images WHERE name = ?", [name], (err, row) => {
-      if (err) {
-        return callBack(err);
-      }
+//     db.get("SELECT data FROM images WHERE name = ?", [name], (err, row) => {
+//       if (err) {
+//         return callBack(err);
+//       }
 
-      if (row) {
-        fs.writeFileSync("retrieved_image.jpg", row.data);
+//       if (row) {
+//         fs.writeFileSync("retrieved_image.jpg", row.data);
 
-        return callBack(null, row.data);
-      }
-    });
+//         return callBack(null, row.data);
+//       }
+//     });
 
-    db.close();
-  },
-};
+//     db.close();
+//   },
+// };
