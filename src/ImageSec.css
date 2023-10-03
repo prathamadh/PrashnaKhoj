@@ -1,31 +1,29 @@
 .imageSec {
   width: 100%;
-  height: 800px;
-
+  min-height: 800px;
+  height: auto;
   min-width: 150px;
-
-  /* background-position: center center; */
-  /* background-position: top right; */
-
-  /* background-image: linear-gradient(steelblue, white);
-    background-image: linear-gradient(to left, steelblue, green, white); */
   background-image: url(./img/photp.jpg);
   background-size: cover;
-  /* background-image: radial-gradient(black, white);
-    background-repeat: repeat-y, no-repeat;
-    background-position: right center;
-    background-size: 20%, auto; */
-
   text-shadow: 2px 2px 2px black;
-
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Center content vertically */
+
+  /* Additional styling for smaller screens */
+  @media (max-width: 768px) {
+    min-height: 400px;
+    font-size: 40px;
+  }
 }
 
 .imageSecP {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
   font-size: 80px;
   color: #e7edfa;
+
+  /* Additional styling for smaller screens */
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 }

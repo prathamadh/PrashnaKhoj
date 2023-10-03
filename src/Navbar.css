@@ -5,14 +5,16 @@
   list-style: none;
   box-sizing: border-box;
 }
-body {
+/* body {
   font-family: montserrat;
-}
+} */
 nav {
+  position: fixed;
   background: white;
   height: 80px;
   width: 100%;
-  box-shadow: 0 50px 50px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0 2px 2px #140c40, 0 0 0 2px whitesmoke;
+  z-index: 2;
 }
 label.logo {
   color: #140c40;
@@ -44,7 +46,7 @@ a:hover {
 }
 .checkbtn {
   font-size: 30px;
-  color: white;
+  color: black;
   float: right;
   line-height: 80px;
   margin-right: 40px;

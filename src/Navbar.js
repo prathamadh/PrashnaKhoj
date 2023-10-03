@@ -8,15 +8,15 @@ const Navbar = () => {
     <div>
       <nav>
         <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
+        <label htmlFor="check" className="checkbtn">
           <i className="fas">
             <FontAwesomeIcon icon={faBars} />
           </i>
         </label>
-        <label class="logo">PrashnaKhoj</label>
+        <label className="logo">PrashnaKhoj</label>
         <ul>
           <li>
-            <a class="active" href="#">
+            <a className="active" href="#">
               Home
             </a>
           </li>
