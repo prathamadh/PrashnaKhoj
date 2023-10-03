@@ -8,7 +8,9 @@ const db = new sqlite3.Database("final.db");
 const router = require("express").Router();
 // const db = require("../config/connectdb");
 
-router.get("/", (req, res) => {
+router.post("/", (req, res) => {
+  const { search } = req.body;
+  console.log(search);
   // function insertImage() {
   //   const name = "photp.jpg";
   //   const imagePath = path.join(__dirname, "photp.jpg");
@@ -29,9 +31,9 @@ router.get("/", (req, res) => {
   //   insertImage();
   // });
 
-  const name = "photp.jpg";
+  // const name = "photp.jpg";
 
-  db.get("SELECT data FROM images WHERE name = ?", [name], (err, row) => {
+  db.get("SELECT data FROM images WHERE name = ?", [search], (err, row) => {
     if (err) {
       console.error(err.message);
       return res.status(500).json({
@@ -43,13 +45,13 @@ router.get("/", (req, res) => {
     if (row) {
       const imagePath = path.join(__dirname, "Retrieved_image.jpg");
       fs.writeFileSync(imagePath, row.data);
-      console.log(`Retrieved ${name} from the database.`);
+      console.log(`Retrieved ${search} from the database.`);
       return res.status(200).json({
         success: true,
         data: row.data,
       });
     } else {
-      console.log(`${name} not found in the database.`);
+      console.log(`${search} not found in the database.`);
       return res.status(200).json({
         success: false,
         message: "record not found",
