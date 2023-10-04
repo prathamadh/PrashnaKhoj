@@ -12,6 +12,7 @@ const Search = () => {
   // useEffect(() => {
   //   console.log(search);
   // }, [search]);
+  const imgContainer = document.getElementById("imgContainer");
 
   const handleSubmit = async (e) => {
     e.preventDefault(console.log("result" + search));
@@ -30,8 +31,15 @@ const Search = () => {
         }
       );
 
-      console.log(response.data);
-      console.log(JSON.stringify(response));
+      const imgArr = response.data.results;
+
+      imgContainer.innerHTML = "";
+
+      imgArr.forEach((imgArr) => {
+        const imgElement = document.createElement("img");
+        imgElement.src = imgArr;
+        imgContainer.appendChild(imgElement);
+      });
     } catch (err) {
       if (!err?.response) {
         console.log("No server response");
@@ -41,26 +49,30 @@ const Search = () => {
     }
   };
   return (
-    <div id="cover">
-      <form onSubmit={handleSubmit}>
-        <div className="tb">
-          <div className="td">
-            <input
-              type="text"
-              placeholder="Search"
-              required
-              onChange={(e) => setSearch(e.target.value)}
-            />
+    <>
+      <div id="cover">
+        <form onSubmit={handleSubmit}>
+          <div className="tb">
+            <div className="td">
+              <input
+                type="text"
+                placeholder="Search"
+                required
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </div>
+            <div className="td" id="s-cover">
+              <button type="submit">
+                <div id="s-circle"></div>
+                <span></span>
+              </button>
+            </div>
           </div>
-          <div className="td" id="s-cover">
-            <button type="submit">
-              <div id="s-circle"></div>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+
+      <div id="imgContainer"></div>
+    </>
   );
 };
 

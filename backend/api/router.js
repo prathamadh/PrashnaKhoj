@@ -43,7 +43,7 @@ router.post("/", async (req, res) => {
 
       return res.status(200).json({
         success: true,
-        data: results,
+        results: results,
       });
     } else {
       console.log(`${search} not found in the database.`);
