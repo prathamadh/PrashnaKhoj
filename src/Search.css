@@ -2,11 +2,11 @@
   outline: none;
 }
 
-html,
+/* html,
 body {
   height: 100%;
   min-height: 100%;
-}
+} */
 
 /* body {
     margin: 0;
@@ -23,8 +23,8 @@ body {
   vertical-align: middle;
 }
 
-input,
-button {
+.inputt,
+.btn {
   color: #140c40;
   font-family: Nunito;
   padding: 0;
@@ -34,12 +34,13 @@ button {
 }
 
 #cover {
-  /* position: absolute; */
-  top: 50%;
+  position: absolute;
+  /* top: 50%; */
   left: 0;
   right: 0;
   width: 90%;
-  width: 1000px;
+  height: auto;
+  /* width: 1000px; */
   padding: 35px;
   margin: -83px auto 0 auto;
   background-color: #e7edfa;
@@ -49,11 +50,11 @@ button {
   z-index: 1;
 }
 
-form {
+.formm {
   height: 96px;
 }
 
-input[type="text"] {
+.inputt {
   width: 100%;
   height: 96px;
   font-size: 60px;
@@ -65,7 +66,7 @@ input[type="text"] {
   }
 }
 
-input[type="text"]::placeholder {
+.inputt::placeholder {
   color: #140c40;
 }
 
@@ -74,7 +75,7 @@ input[type="text"]::placeholder {
   padding-left: 35px;
 }
 
-button {
+.btn {
   position: relative;
   display: block;
   width: 84px;
@@ -101,7 +102,7 @@ button {
   transition: 0.5s ease all;
 }
 
-button span {
+.btn span {
   position: absolute;
   top: 68px;
   left: 43px;
@@ -114,8 +115,8 @@ button span {
   transition: 0.5s ease all;
 }
 
-button span:before,
-button span:after {
+.btn span:before,
+.btn span:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -162,8 +163,7 @@ button span:after {
 }
 
 @media (max-width: 768px) {
-  input[type="text"] {
-    font-size: 40px;
+  .formm {
     height: 60px;
   }
 }

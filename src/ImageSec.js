@@ -7,7 +7,7 @@ import Search from "./Search";
 const ImageSec = () => {
   return (
     <div className="imageSec">
-      <p className="imageSecP">Feel Free To Search Anything</p>
+      {/* <p className="imageSecP">Feel Free To Search Anything</p> */}
       <Search />
     </div>
   );

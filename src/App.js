@@ -2,6 +2,8 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Results from "./Results";
 import About from "./About";
+import Section from "./Section";
+import ImageSec from "./ImageSec";
 
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 function App() {
@@ -11,7 +13,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<ImageSec />} />
           <Route path="/results" element={<Results />} />
         </Routes>
       </BrowserRouter>

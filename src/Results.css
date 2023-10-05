@@ -1,21 +1,40 @@
 /* Results.css */
 
 /* Default styles for larger screens */
+.resultPara {
+  color: #4760ff;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  /* Set a maximum width for larger screens */
+  max-width: 100%; /* Adjust this value as needed */
+  margin: 0 auto; /* Center the element horizontally */
+}
+
+.results {
+  background-color: #e7edfa;
+  min-height: 100vh;
+  width: 100%; /* Make the width responsive */
+  height: auto; /* Adjust the height as needed */
+}
 
 .results-container {
   /* margin-top: 6000px; */
-  width: 1200px; /* Adjust the default width of the container */
+  width: 80%; /* Make the width responsive */
   height: auto; /* Adjust the default height of the container */
-  border: 2px solid black;
+  border: 5px solid #140c40;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   margin: auto;
 }
+
 .spacer {
   height: 200px; /* Adjust the height as needed */
 }
 
 .img-container {
+  background: #140c40;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -25,13 +44,18 @@
 .img-container img {
   width: 100%;
   height: auto;
-  margin-bottom: 10px; /* Adjust spacing between images */
+  margin-bottom: 3px;
+  /* Adjust spacing between images */
 }
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
+  .resultPara {
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
+
   .results-container {
-    width: 100%; /* Adjust container width for smaller screens */
+    max-width: 100%; /* Limit container width for smaller screens */
     height: auto; /* Allow the container to expand vertically */
     max-height: 400px; /* Limit the container's maximum height */
   }

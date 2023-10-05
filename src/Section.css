@@ -1,6 +1,7 @@
 .sec {
   background-color: #e7edfa;
   height: auto;
+  min-height: 50vh;
 }
 
 .secP {
