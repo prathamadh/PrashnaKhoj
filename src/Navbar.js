@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { faBars } from "@fortawesome/fontawesome-free-solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -16,21 +17,29 @@ const Navbar = () => {
         <label className="logo">PrashnaKhoj</label>
         <ul>
           <li>
-            <a className="active" href="#">
+            <Link to="/" className=" nav-link active">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="/about" className="nav-link">
+              About
+            </Link>
           </li>
           <li>
-            <a href="#">Services</a>
+            <Link to="/services" className="nav-link">
+              Services
+            </Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="/contact" className="nav-link">
+              Contact
+            </Link>
           </li>
           <li>
-            <a href="#">Feedback</a>
+            <Link to="/r" className="nav-link">
+              Results
+            </Link>
           </li>
         </ul>
       </nav>

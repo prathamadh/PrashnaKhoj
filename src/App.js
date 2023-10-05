@@ -1,12 +1,20 @@
 import Navbar from "./Navbar";
-import Section from "./Section";
-import ImageSec from "./ImageSec";
+import Home from "./Home";
+import Results from "./Results";
+import About from "./About";
+
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <>
-      <Navbar />
-      <ImageSec />
-      <Section />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/r" element={<Results />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

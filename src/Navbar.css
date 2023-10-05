@@ -32,15 +32,31 @@ nav ul li {
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul li a {
+/* nav ul li a {
   color: #140c40;
   font-size: 20px;
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
+} */
+.nav-link {
+  color: #140c40;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none; /* Remove default underline */
+  /* margin-right: 20px; */
 }
-a.active,
+
+/* a.active,
 a:hover {
+  background: #e7edfa;
+  transition: 0.5s;
+} */
+
+.nav-link.active,
+.nav-link:hover {
   background: #e7edfa;
   transition: 0.5s;
 }

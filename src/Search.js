@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./Search.css";
 import axios from "axios";
 
+import { useNavigate } from "react-router-dom";
+
 // axios.create({
 //   baseURL: "http://localhost:3500",
 // });
 
 const Search = () => {
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   console.log(search);
@@ -16,7 +19,7 @@ const Search = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault(console.log("result" + search));
-
+    // navigate("/results");
     try {
       const response = await axios.post(
         "http://localhost:3500/api",
