@@ -20,3 +20,22 @@ function App() {
 }
 
 export default App;
+
+// import React from "react";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import Search from "./Search";
+// import Results from "./Results"; // Assuming you have a Results component
+
+// function App() {
+//   return (
+//     <Router>
+
+//       <Routes>
+//         <Route path="/" element={<Search />} />
+//         <Route path="/results" element={<Results />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App;
