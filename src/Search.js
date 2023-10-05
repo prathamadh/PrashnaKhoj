@@ -86,7 +86,9 @@
 // export default Search;
 
 import React, { useState } from "react";
+import "./Combined.css";
 import "./Search.css";
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 

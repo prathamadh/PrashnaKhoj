@@ -34,7 +34,7 @@ button {
 }
 
 #cover {
-  position: absolute;
+  /* position: absolute; */
   top: 50%;
   left: 0;
   right: 0;
@@ -58,6 +58,11 @@ input[type="text"] {
   height: 96px;
   font-size: 60px;
   line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+    height: 60px;
+  }
 }
 
 input[type="text"]::placeholder {
@@ -75,6 +80,11 @@ button {
   width: 84px;
   height: 96px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 #s-circle {
@@ -149,4 +159,11 @@ button span:after {
   right: -6px;
   width: 40px;
   background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  input[type="text"] {
+    font-size: 40px;
+    height: 60px;
+  }
 }

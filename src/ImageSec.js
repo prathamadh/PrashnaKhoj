@@ -1,5 +1,7 @@
 import React from "react";
+import "./Combined.css";
 import "./ImageSec.css";
+
 import Search from "./Search";
 
 const ImageSec = () => {

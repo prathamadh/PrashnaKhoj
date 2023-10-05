@@ -1,3 +1,4 @@
+/* .imageSec styles for larger screens */
 .imageSec {
   width: 100%;
   min-height: 800px;
@@ -9,21 +10,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Center content vertically */
-
-  /* Additional styling for smaller screens */
-  @media (max-width: 768px) {
-    min-height: 400px;
-    font-size: 40px;
-  }
+  flex-direction: column;
 }
 
-.imageSecP {
+.imageSec p {
   font-size: 80px;
   color: #e7edfa;
+}
 
-  /* Additional styling for smaller screens */
-  @media (max-width: 768px) {
+/* Responsive styles for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .imageSec {
+    min-height: 400px;
+  }
+
+  .imageSec p {
     font-size: 40px;
   }
 }

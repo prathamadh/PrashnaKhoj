@@ -1,11 +1,8 @@
-/* * {
-  background-color: #e7edfa;
-} */
-
 .sec {
   background-color: #e7edfa;
   height: auto;
 }
+
 .secP {
   text-align: center;
   color: #140c40;
@@ -14,4 +11,15 @@
   -webkit-font-feature-settings: "salt";
   font-feature-settings: "salt";
   font-variant-numeric: tabular-nums;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .sec {
+    height: auto;
+  }
+
+  .secP {
+    font-size: 40px;
+  }
 }
