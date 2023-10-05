@@ -4,22 +4,15 @@ import axios from "axios";
 
 import { useNavigate } from "react-router-dom";
 
-// axios.create({
-//   baseURL: "http://localhost:3500",
-// });
-
+const exportImgArr = [];
 const Search = () => {
   const [search, setSearch] = useState("");
+  const [imgArr, setImgArr] = useState([]); // Declare and initialize imgArr here
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   console.log(search);
-  // }, [search]);
-  const imgContainer = document.getElementById("imgContainer");
-
   const handleSubmit = async (e) => {
-    e.preventDefault(console.log("result" + search));
-    // navigate("/results");
+    e.preventDefault();
+
     try {
       const response = await axios.post(
         "http://localhost:3500/api",
@@ -33,16 +26,10 @@ const Search = () => {
           withCredentials: true,
         }
       );
+      const images = response.data.results;
+      setImgArr(images);
 
-      const imgArr = response.data.results;
-
-      imgContainer.innerHTML = "";
-
-      imgArr.forEach((imgArr) => {
-        const imgElement = document.createElement("img");
-        imgElement.src = imgArr;
-        imgContainer.appendChild(imgElement);
-      });
+      navigate("/results", { state: { searchResults: imgArr } });
     } catch (err) {
       if (!err?.response) {
         console.log("No server response");
@@ -51,6 +38,9 @@ const Search = () => {
       }
     }
   };
+
+  const exportImgArr = imgArr;
+
   return (
     <>
       <div id="cover">
@@ -73,10 +63,9 @@ const Search = () => {
           </div>
         </form>
       </div>
-
-      <div id="imgContainer"></div>
     </>
   );
 };
 
 export default Search;
+export { exportImgArr };
