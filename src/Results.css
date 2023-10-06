@@ -12,7 +12,9 @@
 }
 
 .results {
-  background-color: #e7edfa;
+  /* background-color: #e7edfa; */
+  /* background-color: #f3ed80; */
+  background-color: black;
   min-height: 100vh;
   width: 100%; /* Make the width responsive */
   height: auto; /* Adjust the height as needed */
@@ -23,6 +25,7 @@
   width: 80%; /* Make the width responsive */
   height: auto; /* Adjust the default height of the container */
   border: 5px solid #140c40;
+  /* border: 5px solid #4760ff; */
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -35,6 +38,7 @@
 
 .img-container {
   background: #140c40;
+  /* background: #4760ff; */
   display: flex;
   flex-direction: column;
   height: 100%;
