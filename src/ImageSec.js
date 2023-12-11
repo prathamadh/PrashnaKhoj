@@ -8,8 +8,10 @@ const ImageSec = () => {
   return (
     <div className="imageSec">
       {/* <p className="imageSecP">Feel Free To Search Anything</p> */}
-      <Search />
-      <FIlter />
+      <div className="search-filter-container">
+        <Search />
+        <FIlter />
+      </div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Results from "./Results";
 import About from "./About";
 import Section from "./Section";
 import ImageSec from "./ImageSec";
+import Filter from "./FIlter";
 
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 function App() {

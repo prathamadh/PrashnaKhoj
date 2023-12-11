@@ -19,7 +19,7 @@
 }
 
 /* Responsive styles for smaller screens (max-width: 768px) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .imageSec {
     min-height: 400px;
   }
@@ -27,4 +27,4 @@
   .imageSec p {
     font-size: 40px;
   }
-}
+} */

@@ -167,12 +167,13 @@ const Results = () => {
       <p className="resultPara">Results for "{search}":</p>
       <div className="results-container">
         {/* Display the imgArr data here */}
-        <div className="img-container">
+        {/* <div className="img-container">
           {imgArr &&
             imgArr.map((imgSrc, index) => (
               <img key={index} src={imgSrc} alt={`Image ${index}`} />
             ))}
-        </div>
+        </div> */}
+        
       </div>
     </div>
   );

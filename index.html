@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elasticsearch Autocomplete</title>
+  </head>
+  <body>
+    <input type="text" id="search_box" style="height: 50px; font-size: 14pt" />
+    <ul id="results"></ul>
+    <script>
+      let debounce;
+      document
+        .getElementById("search_box")
+        .addEventListener("keydown", function (e) {
+          clearTimeout(debounce);
+          debounce = setTimeout(getAutoComplete, 300);
+        });
+
+      function getAutoComplete() {
+        const query = document.getElementById("search_box").value;
+        fetch(
+          `http://localhost:3000/searchs?q=${encodeURIComponent(query.trim())}`
+        )
+          .then((resp) => resp.json())
+          .then((data) => {
+            const results = document.getElementById("results");
+            results.innerHTML = "";
+            data.forEach((item) => {
+              const li = document.createElement("li");
+              li.textContent = item;
+              results.appendChild(li);
+            });
+          });
+      }
+    </script>
+  </body>
+</html>
