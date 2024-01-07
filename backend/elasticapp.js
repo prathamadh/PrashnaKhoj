@@ -2,7 +2,17 @@ const express = require("express");
 const app = express();
 const elasticsearch = require("elasticsearch");
 
-const es = new elasticsearch.Client({ host: "http://localhost:9200" });
+// const es = new elasticsearch.Client({ host: "http://localhost:9200",httpAuth: "elastic:R9oINbyis1UrD0ZUU726" });
+
+const es = new elasticsearch.Client({
+  host: "https://127.0.0.1:9200",
+  httpAuth: "elastic:R9oINbyis1UrD0ZUU726",
+  ssl: {
+    ca: fs.readFileSync('C:\Users\acm\Desktop\prashnakhoj by ashim\tobedockered\http_ca.crt'), // Path to your CA certificate file
+    rejectUnauthorized: false // Set to false if you want to skip certificate validation
+  }
+});
+
 
 const cors = require("cors");
 
@@ -35,7 +45,7 @@ app.get("/searchs", async (req, res) => {
   };
 
   const resp = await es.search({
-    index: "updated_qp",
+    index: "data",
     body: { query: payload },
     size: 15,
   });
