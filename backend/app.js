@@ -30,7 +30,7 @@ const es = new elasticsearch.Client({
   host: "https://127.0.0.1:9200",
   httpAuth: "elastic:R9oINbyis1UrD0ZUU726",
   ssl: {
-    ca: fs.readFileSync("C:\\Users\\acm\\Desktop\\http_ca.crt"), // Path to your CA certificate file
+    ca: fs.readFileSync("http_ca.crt"), // Path to your CA certificate file
     rejectUnauthorized: false // Set to false if you want to skip certificate validation
   }
 });
