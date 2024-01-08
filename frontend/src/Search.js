@@ -9,28 +9,6 @@ const Search = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
-  const elastic = async (e) => {
-    e.preventDefault();
-
-    fetch(
-      `http://localhost:3000/searchs?q=${encodeURIComponent(search.trim())}`
-    )
-      .then((resp) => {
-        if (!resp.ok) {
-          throw new Error(`HTTP error! status: ${resp.status}`);
-        }
-        return resp.json();
-      })
-      .then((data) => {
-        data.forEach((item) => {
-          console.log(item);
-        });
-      })
-      .catch((error) => {
-        console.log("There was a problem with the fetch operation: ", error);
-      });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -44,9 +22,12 @@ const Search = () => {
       console.log(data);
 
       // Instead of modifying the DOM directly, navigate to the results page
-      navigate("/results", {
-        state: { imgArr: response.data.results, search: search },
-      });
+      navigate("/results", 
+      {
+        state: { arr: data, search: search },
+      }
+      );
+      
     } catch (err) {
       if (!err?.response) {
         console.log("No server response");
