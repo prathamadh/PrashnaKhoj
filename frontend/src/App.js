@@ -2,21 +2,25 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Results from "./Results";
 import About from "./About";
-import Section from "./Section";
-import ImageSec from "./ImageSec";
-import Filter from "./FIlter";
+import Footer from "./Components/Footer";
+
 
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Contact from "./Components/Contact";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<ImageSec />} />
-          <Route path="/results" element={<Results />} />
-        </Routes>
+        <div className="wrapper">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/results" element={<Results />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
       </BrowserRouter>
     </>
   );

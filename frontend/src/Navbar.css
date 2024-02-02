@@ -5,18 +5,23 @@
   list-style: none;
   box-sizing: border-box;
 }
+.scrolled {
+  background-color: rgba(0, 0, 0);
+  z-index: 6;
+  /* You can customize other styles for the navbar when scrolled */
+}
 
 nav {
   position: fixed;
-  background: white;
+  /* background: white; */
   height: 80px;
   width: 100%;
-  box-shadow: 0 2px 2px #140c40, 0 0 0 2px whitesmoke;
+  /* box-shadow: 0 2px 2px #140c40, 0 0 0 2px whitesmoke; */
   z-index: 2;
 }
 
 label.logo {
-  color: #140c40;
+  color: #ffffff;
   font-size: 38px;
   line-height: 80px;
   padding: 0 100px;
@@ -35,7 +40,7 @@ nav ul li {
 }
 
 .nav-link {
-  color: #140c40;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 500;
   padding: 7px 13px;
@@ -46,8 +51,8 @@ nav ul li {
 
 .nav-link.active,
 .nav-link:hover {
-  color: #140c40;
-  background: #e7edfa;
+  color: #EB5A08;
+  /* background: #e7edfa; */
   transition: 0.5s;
 }
 
@@ -92,14 +97,22 @@ nav ul li {
     left: -100%;
     text-align: center;
     transition: all 0.5s;
+    background-color: #fff;
+  
   }
   nav ul li {
     display: block;
     margin: 50px 0;
     line-height: 30px;
+    
+  }
+
+  .nav-link{
+    color: black;
   }
   nav ul li a {
     font-size: 20px;
+    color: black;
   }
   a:hover,
   a.active {

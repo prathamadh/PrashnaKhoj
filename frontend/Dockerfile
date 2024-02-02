@@ -1,9 +1,15 @@
-FROM node 
-WORKDIR  /usr/src/Prashna
+FROM node AS prashanfrontend
+
+WORKDIR /usr/src/Prashna
 
 COPY . ./
-RUN npm i --save @fortawesome/fontawesome-free-solid
-RUN npm i --save @fortawesome/react-fontawesome@latest
-RUN npm install 
-CMD npm start 
 
+CMD npm start
+
+
+writiting papr in overleaf and latex
+
+
+
+
+https://hub.docker.com/r/jarylc/languagetool

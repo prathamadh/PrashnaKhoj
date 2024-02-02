@@ -2,7 +2,7 @@
 
 /* Default styles for larger screens */
 .resultPara {
-  color: #4760ff;
+  color: #EB5A08;
   font-size: 40px;
   font-weight: bolder;
   text-align: center;
@@ -14,22 +14,24 @@
 .results {
   /* background-color: #e7edfa; */
   /* background-color: #f3ed80; */
-  background-color: white;
+  /* background-color: black; */
   min-height: 100vh;
   width: 100%; /* Make the width responsive */
   height: auto; /* Adjust the height as needed */
+  z-index: 5;
 }
 
 .results-container {
   /* margin-top: 6000px; */
   width: 80%; /* Make the width responsive */
   height: auto; /* Adjust the default height of the container */
-  border: 5px solid white;
+  border: 5px solid #EB5A08;
   /* border: 5px solid #4760ff; */
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   margin: auto;
+  margin-top: 20px;
 }
 
 .spacer {
@@ -37,19 +39,23 @@
 }
 
 .img-container {
-  background: wheat;
+  /* background: #140c40; */
   /* background: #4760ff; */
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow-y: auto; /* Enable vertical scrolling */
+  margin: 25px;
+  
+
 }
 
 .img-container img {
   width: 100%;
   height: auto;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   /* Adjust spacing between images */
+  border:1px solid rgb(195, 194, 194);
 }
 
 /* Responsive styles for smaller screens */

@@ -1,17 +1,29 @@
 .sec {
+  margin-top: 50px;
+  margin-bottom: 50px;
   background-color: #e7edfa;
   height: auto;
   min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .secP {
-  text-align: center;
+  text-align: left;
+  margin: 150px;
   color: #140c40;
-  font-size: 100px;
+  font-size: 50px;
   font-family: Basis Grotesque, Helvetica, sans-serif;
   -webkit-font-feature-settings: "salt";
   font-feature-settings: "salt";
   font-variant-numeric: tabular-nums;
+  
+}
+
+.sec img{
+  width: 500px;
+  height: 500px;
 }
 
 /* Responsive styles for smaller screens */
