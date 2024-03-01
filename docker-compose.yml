@@ -1,22 +1,36 @@
 version: '3.8'
 
 services:
-  es01:
-    image: depelastic:v1
-    ports:
-      - "9200:9200"
+  fes01:
+    image: ghcr.io/prathamadh/prashnakhoj:v1
+    # ports:
+    #   - "8080:8080"
     networks:
       - elastic
 
-  kibana:
-    image: depkibana:v1
+  # kibana:
+  #   image: depkibana:v1
+  #   networks:
+  #     - elastic
+  #   ports:
+  #     - "5601:5601"
+
+  fbackend:
+    build:
+      context: backend
+      dockerfile: Dockerfile
     networks:
       - elastic
+
+  ffrontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
     ports:
-      - "5601:5601"
+      - "3000:3000"
+    networks:
+      - elastic
 
 networks:
   elastic:
     driver: bridge
-
-
