@@ -27,7 +27,7 @@ const app = express();
 
 const elasticsearch = require("elasticsearch");
 const es = new elasticsearch.Client({
-  host: "https://127.0.0.1:9200",
+  host: "https://fes01:9200",
   httpAuth: "elastic:GmLzRUMlVJe+4xHHr0aC",
   // ssl: {
   //   ca: fs.readFileSync("http_ca.crt"), // Path to your CA certificate file
@@ -37,7 +37,7 @@ const es = new elasticsearch.Client({
 
 const cors = require("cors");
 const corsOptions = {
-  origin: "http://localhost:3000", // Replace with the actual origin of your frontend app
+  origin: "http://ffrontend:3000", // Replace with the actual origin of your frontend app
   credentials: true, // Allow credentials (cookies, HTTP authentication, etc.)
 };
 

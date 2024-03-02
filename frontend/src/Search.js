@@ -102,7 +102,7 @@ const Search = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3500/searchs?q=${encodeURIComponent(search.trim())}`
+        `http://fbackend:3500/searchs?q=${encodeURIComponent(search.trim())}`
       );
 
       // console.log(response);
